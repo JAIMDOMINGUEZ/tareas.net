@@ -1,19 +1,17 @@
-namespace models
+namespace models;
 {
     internal class libreria
     {
       
 		private List<Pelicula> _peliculas;
 		
-
+    
 
     public void agregar(Pelicula pelicula){
         if (pelicula != null) {
                 _peliculas.Add(pelicula);
-
-		}
-
-    }
+            }
+      }
     public void editar(string nnombre,string nombre,string genero,int año,string director){
         if (nombre != null&&genero != null&&año != 0 &&director != null) {
                foreach(Pelicula pelicula in _peliculas)
@@ -25,9 +23,13 @@ namespace models
                         pelicula.nombre=nnombre;
 
                     }
+                 
                 }
 
-		}
+		  }else
+      {
+        Console.WriteLine("Pelicula no encontrada");
+      }
 
     }
 
@@ -39,10 +41,14 @@ namespace models
                         _peliculas.Remove(pelicula);
 
                     }
+                    
                 }
 
-		}
-
+		      }
+          else
+          {
+            Console.WriteLine("Pelicula no encontrada");
+          }
     }
     public void mostrar(string nombre){
         if (nombre != null) {
@@ -54,7 +60,11 @@ namespace models
                     }
                 }
 
-		}
+		        }
+            else
+            {
+              Console.WriteLine("Pelicula no encontrada");
+            }
     }
     public void mostrarTodos(){
                foreach(Pelicula pelicula in _peliculas)
@@ -63,13 +73,9 @@ namespace models
                 Console.WriteLine(pelicula.ToString());
                        
               }
-                
-
-		}
-
-
     }
-
+    
+  }
 		
-	}
+	
 }
