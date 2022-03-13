@@ -95,10 +95,21 @@ namespace Ejercicio1;
         MostrarMenu();
     }
 
-
-    
+    public void generar(){
+        Pelicula peli = new Pelicula("la marca del zorrrilo","comedia",1950,"Gilberto Martínez Solares");
+        li.agregar(peli);
+        Pelicula peli2 = new Pelicula("Los olviados","drama",1950,"Luis Buñuel");
+        li.agregar(peli2);
+        Pelicula peli3 = new Pelicula("Angel exterminador","drama",1966,"Luis Buñuel");
+        li.agregar(peli3);
+        Pelicula peli4 = new Pelicula("Forrest Gump","comedia",1994,"Robert Zemeckis");
+        li.agregar(peli4);
+        Pelicula peli5 = new Pelicula("Chabelo y Pepito contra los monstruos","comedia",1973,"José Estrada");
+        li.agregar(peli5);
 
     }
     
+    }
+    
 
-}
+}//

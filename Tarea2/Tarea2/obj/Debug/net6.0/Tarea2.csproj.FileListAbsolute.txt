@@ -13,3 +13,11 @@ C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\Tarea2\Tar
 C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\Tarea2\Tarea2\obj\Debug\net6.0\ref\Tarea2.dll
 C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\Tarea2\Tarea2\obj\Debug\net6.0\Tarea2.pdb
 C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\Tarea2\Tarea2\obj\Debug\net6.0\Tarea2.genruntimeconfig.cache
+C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\tareas.net\Tarea2\Tarea2\obj\Debug\net6.0\Tarea2.csproj.AssemblyReference.cache
+C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\tareas.net\Tarea2\Tarea2\obj\Debug\net6.0\Tarea2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\tareas.net\Tarea2\Tarea2\obj\Debug\net6.0\Tarea2.AssemblyInfoInputs.cache
+C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\tareas.net\Tarea2\Tarea2\obj\Debug\net6.0\Tarea2.AssemblyInfo.cs
+C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\tareas.net\Tarea2\Tarea2\obj\Debug\net6.0\Tarea2.csproj.CoreCompileInputs.cache
+C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\tareas.net\Tarea2\Tarea2\obj\Debug\net6.0\Tarea2.dll
+C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\tareas.net\Tarea2\Tarea2\obj\Debug\net6.0\ref\Tarea2.dll
+C:\Users\James Backster\Documents\Libros\workspace\3semestre\4to\.net\tareas.net\Tarea2\Tarea2\obj\Debug\net6.0\Tarea2.pdb
