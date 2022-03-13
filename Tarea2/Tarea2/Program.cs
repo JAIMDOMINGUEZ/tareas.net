@@ -2,6 +2,6 @@
 using models;
 using Ejercicio1;
 Registro  re =  new Registro();
-re.generar();
+//re.generar();
 re.MostrarMenu();
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\James Backster\\Documents\\Libros\\workspace\\3semestre\\4to\\.net\\Tarea2\\Tarea2\\Tarea2.csproj": {}
+    "C:\\Users\\James Backster\\Documents\\Libros\\workspace\\3semestre\\4to\\.net\\tareas.net\\Tarea2\\Tarea2\\Tarea2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\James Backster\\Documents\\Libros\\workspace\\3semestre\\4to\\.net\\Tarea2\\Tarea2\\Tarea2.csproj": {
+    "C:\\Users\\James Backster\\Documents\\Libros\\workspace\\3semestre\\4to\\.net\\tareas.net\\Tarea2\\Tarea2\\Tarea2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\James Backster\\Documents\\Libros\\workspace\\3semestre\\4to\\.net\\Tarea2\\Tarea2\\Tarea2.csproj",
+        "projectUniqueName": "C:\\Users\\James Backster\\Documents\\Libros\\workspace\\3semestre\\4to\\.net\\tareas.net\\Tarea2\\Tarea2\\Tarea2.csproj",
         "projectName": "Tarea2",
-        "projectPath": "C:\\Users\\James Backster\\Documents\\Libros\\workspace\\3semestre\\4to\\.net\\Tarea2\\Tarea2\\Tarea2.csproj",
+        "projectPath": "C:\\Users\\James Backster\\Documents\\Libros\\workspace\\3semestre\\4to\\.net\\tareas.net\\Tarea2\\Tarea2\\Tarea2.csproj",
         "packagesPath": "C:\\Users\\James Backster\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\James Backster\\Documents\\Libros\\workspace\\3semestre\\4to\\.net\\Tarea2\\Tarea2\\obj\\",
+        "outputPath": "C:\\Users\\James Backster\\Documents\\Libros\\workspace\\3semestre\\4to\\.net\\tareas.net\\Tarea2\\Tarea2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

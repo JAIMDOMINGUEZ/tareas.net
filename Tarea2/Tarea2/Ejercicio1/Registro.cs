@@ -1,5 +1,5 @@
 using models;
-namespace Ejercicio1;
+namespace Ejercicio1
 {
     internal class Registro
     {
@@ -10,7 +10,7 @@ namespace Ejercicio1;
 
     public void MostrarMenu(){
         int select =0;
-        while (select<1&&select>5)
+        while (select==0)
         {
         Console.WriteLine("Menu");
         Console.WriteLine("1.Agregar Pelicula");
@@ -52,6 +52,7 @@ namespace Ejercicio1;
         Console.WriteLine("______________________________"); 
         Pelicula peli = new Pelicula(nombre,genero,año,director);
         li.agregar(peli);
+        MostrarMenu();
     }
    
     
@@ -112,4 +113,4 @@ namespace Ejercicio1;
     }
     
 
-}//
+}

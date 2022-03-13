@@ -1,20 +1,23 @@
-namespace models;
+namespace models
 
 {
   
 
 
-    internal class libreria
+    internal class Libreria
     {
       
 		private List<Pelicula> _peliculas;
-		
-    
+
+    public Libreria(){
+      _peliculas=new List<Pelicula>();
+    }
 
     public void agregar(Pelicula pelicula){
         if (pelicula != null) {
                 _peliculas.Add(pelicula);
-            }
+                
+        }
       }
     public void editar(string nnombre,string nombre,string genero,int año,string director){
         if (nombre != null&&genero != null&&año != 0 &&director != null) {

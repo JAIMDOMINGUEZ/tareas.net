@@ -1,4 +1,4 @@
-namespace models;
+namespace models
 {
     internal class Pelicula
     {
