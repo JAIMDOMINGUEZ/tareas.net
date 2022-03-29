@@ -107,7 +107,7 @@ namespace Ejercicio1
         li.agregar(peli4);
         Pelicula peli5 = new Pelicula("Chabelo y Pepito contra los monstruos","comedia",1973,"José Estrada");
         li.agregar(peli5);
-
+        MostrarMenu();
     }
     
     }
