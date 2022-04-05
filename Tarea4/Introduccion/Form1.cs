@@ -28,10 +28,33 @@ public partial class Form1 : Form
     private Button btnIgual;
     private Button btnDivision;
     private TextBox txtDisplay;
+
     private Label lblOperacion;
     private String operacion;
     private Double resultado;
-
+    private Button btnpi;
+    private Button btnlogaritmo;
+    private Button btnCuadrado;
+    private Button btnSqrt;
+    private Button btnSin;
+    private Button btnDec;
+    private Button btnXy;
+    private Button btnCosh;
+    private Button btnCos;
+    private Button btnBin;
+    private Button btn1x;
+    private Button btnTanh;
+    private Button btnTan;
+    private Button btnHex;
+    private Button btnLnx;
+    private Button btnExp;
+    private Button btnMod;
+    private Button btnOct;
+    private Button btnSinh;
+    private MenuStrip menu;
+    private ToolStripMenuItem catTipo;
+    private ToolStripMenuItem miEstandar;
+    private ToolStripMenuItem miCientifica;
 
     public Form1()
     {
@@ -59,7 +82,30 @@ public partial class Form1 : Form
         btnPunto = new Button();
         btnIgual = new Button();
         btnDivision = new Button();
-
+        //Cientifica
+        btnpi= new Button();
+        btnlogaritmo= new Button();
+        btnSqrt= new Button();
+        btnCuadrado= new Button();
+        btnSinh=new Button();
+        btnSin= new Button();
+        btnDec= new Button();
+        btnXy= new Button();
+        btnCosh= new Button();
+        btnCos= new Button();
+        btnBin= new Button();
+        btn1x= new Button();
+        btnTanh= new Button();
+        btnTan= new Button();
+        btnHex= new Button();
+        btnLnx= new Button();
+        btnExp= new Button();
+        btnMod= new Button();
+        btnOct= new Button();
+        menu = new MenuStrip();
+        catTipo= new ToolStripMenuItem();
+        miEstandar=new ToolStripMenuItem();
+        miCientifica=new ToolStripMenuItem();
         //InitializeComponent();
         InicializarComponentes();
         
@@ -70,7 +116,7 @@ public partial class Form1 : Form
     private void InicializarComponentes()
     {
         // Tamaño de la ventana
-        this.Size = new Size(300,500);
+        this.Size = new Size(600,500);
          this.Text = "Calculadora";
         //Tamaño Botones
         btnBorrarUltimo.Size = new Size(60,60);
@@ -93,10 +139,32 @@ public partial class Form1 : Form
         btnPunto.Size = new Size(60,60);
         btnIgual.Size = new Size(60,60);
         btnDivision.Size = new Size(60,60);
-        txtDisplay.Size = new Size(260,50);
+        txtDisplay.Size = new Size(558,50);
         txtDisplay.Multiline=true;
         lblOperacion.AutoSize=true;
         txtDisplay.TextAlign=HorizontalAlignment.Right;
+
+        btnpi.Size  = new Size(60,60);
+        btnlogaritmo.Size  = new Size(60,60);
+        btnCuadrado.Size  = new Size(60,60);
+        btnSinh.Size  = new Size(60,60);
+        btnSqrt.Size  = new Size(60,60);
+        btnSin.Size  = new Size(60,60);
+        btnDec.Size  = new Size(60,60);
+        btnXy.Size  = new Size(60,60);
+        btnCosh.Size  = new Size(60,60);
+        btnCos.Size  = new Size(60,60);
+        btnBin.Size  = new Size(60,60);
+        btn1x.Size  = new Size(60,60);
+        btnTanh.Size  = new Size(60,60);
+        btnTan.Size  = new Size(60,60);
+        btnHex.Size  = new Size(60,60);
+        btnLnx.Size  = new Size(60,60);
+        btnExp.Size  = new Size(60,60);
+        btnMod.Size  = new Size(60,60);
+        btnOct.Size  = new Size(60,60);
+        
+
 
         //Texto
         btnBorrarUltimo.Text="⌫";
@@ -120,10 +188,36 @@ public partial class Form1 : Form
         btnPunto.Text=".";
         btnIgual.Text="=";
         btnDivision.Text="/";
+
+        btnpi.Text="π ";
+        btnlogaritmo.Text="Log";
+        btnCuadrado.Text="x^2";
+        btnSqrt.Text="Sqrt";
+        btnSinh.Text="Sinh";
+        btnSin.Text="Sin";
+        btnDec.Text="Dec";
+        btnXy.Text="x^y";
+        btnCosh.Text="Cosh";
+        btnCos.Text="Cos";
+        btnBin.Text="Bin";
+        btn1x.Text="1/x";
+        btnTanh.Text="Tanh";
+        btnTan.Text="Tan";
+        btnHex.Text="Hex";
+        btnLnx.Text="Ln x";
+        btnExp.Text="Exp";
+        btnMod.Text="Mod";
+        btnOct.Text="Oct";
+        catTipo.Text="Tipo";
+        miEstandar.Text="Estandar";
+        miCientifica.Text="Cientifica";
         //Posicion
-        txtDisplay.Location= new Point(10,30);
-        lblOperacion.Location= new Point(10,30);
+        txtDisplay.Location= new Point(10,50);
+        lblOperacion.Location= new Point(10,50);
+
+
         
+
         List<Button> lista = new List<Button>();
         
         lista.Add(btnBorrarUltimo);
@@ -146,8 +240,10 @@ public partial class Form1 : Form
         lista.Add(btnPunto);
         lista.Add(btnIgual);
         lista.Add(btnDivision);
+
+        
         int x = 10;
-        int y = 85;
+        int y = 105;
         int count =0;
         foreach (Button btn in lista)
         {
@@ -163,13 +259,105 @@ public partial class Form1 : Form
             x+=67;
             count++;
         }
-
+        List<Button> cientifica = new List<Button>();
+        cientifica.Add(btnpi);
+        cientifica.Add(btnlogaritmo);
+        cientifica.Add(btnCuadrado);
+        cientifica.Add(btnSqrt);
+        cientifica.Add(btnSinh);
+        cientifica.Add(btnSin);
+        cientifica.Add(btnDec);
+        cientifica.Add(btnXy);
+        cientifica.Add(btnCosh);
+        cientifica.Add(btnCos);
+        cientifica.Add(btnBin);
+        cientifica.Add(btn1x);
+        cientifica.Add(btnTanh);
+        cientifica.Add(btnTan);
+        cientifica.Add(btnHex);
+        cientifica.Add(btnLnx);
+        cientifica.Add(btnExp);
+        cientifica.Add(btnMod);
+        cientifica.Add(btnOct);
+        x = 310;
+        y = 105;
+        count =0;
+        foreach (Button btn in cientifica)
+        {
+            if (count==4)
+            {
+                x=310;
+                y+=67;
+                count=0;
+            }
+            btn.Location=new Point(x,y);
+            this.Controls.Add(btn);
+            btn.Click+=new EventHandler(btn_click);
+            x+=67;
+            count++;
+        }
+        //Eventos
+        btnSqrt.Click+= new EventHandler(btnSqrt_Click);
+        btnlogaritmo.Click+= new EventHandler(btnLog_Click);
+        btnSin.Click+= new EventHandler(btnSin_Click);
+        btnpi.Click+=new EventHandler(btnpi_Click);
+        miEstandar.Click+= new EventHandler(menuEstandar_Click);
+        miCientifica.Click+= new EventHandler(menuCientifica_Click);
+        btnBin.Click+= new EventHandler(btnBin_Click);
         //Agregar controles a la ventana
         this.Controls.Add(txtDisplay);
         this.Controls.Add(lblOperacion);
+        catTipo.DropDownItems.Add(miEstandar);
+        catTipo.DropDownItems.Add(miCientifica);
+        menu.Items.Add(catTipo);
+        this.Controls.Add(menu);
         lblOperacion.BringToFront();
+        
 
 
+    }
+    private void btnBin_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"Bin({txtDisplay.Text}) =";
+            txtDisplay.Text=Convert.ToString(Int32.Parse(txtDisplay.Text),2).ToString();
+        }
+        
+    }
+    private void btnSqrt_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"Sqrt({txtDisplay.Text}) =";
+            txtDisplay.Text=Math.Sqrt(Double.Parse(txtDisplay.Text)).ToString();
+        }
+        
+    }
+    private void btnSin_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"Sin({txtDisplay.Text}) =";
+            txtDisplay.Text=Math.Sin(Double.Parse(txtDisplay.Text)).ToString();
+        }
+        
+    }
+    private void btnLog_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+        lblOperacion.Text=$"Log({txtDisplay.Text}) =";
+        txtDisplay.Text=Math.Log(Double.Parse(txtDisplay.Text)).ToString();
+        }
+        
+    }
+    private void btnpi_Click(object sender, EventArgs e){
+        txtDisplay.Text="3.141592";
+    }
+    private void menuCientifica_Click(object sender, EventArgs e){
+        this.Size= new Size(600,500);
+        txtDisplay.Size = new Size(558,50);
+    }
+    private void menuEstandar_Click(object sender, EventArgs e){
+        this.Size= new Size(300,500);
+        txtDisplay.Size = new Size(260,50);
     }
 
     private void btn_click(object? sender, EventArgs e)
@@ -259,5 +447,18 @@ public partial class Form1 : Form
             {
                 txtDisplay.Text+=valor;
             }
+    }
+    private bool valido(){
+        if (txtDisplay.Text==""){
+            alerta();    
+            return false;
+        }
+        return true;
+    }
+    
+     private void alerta(){
+        string message = "Ingrese un valor valido"; 
+       
+        MessageBox.Show(message,"Mensaje", MessageBoxButtons.OK,MessageBoxIcon.Warning);
     }
 }
