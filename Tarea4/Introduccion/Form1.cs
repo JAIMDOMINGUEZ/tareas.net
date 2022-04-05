@@ -43,6 +43,7 @@ public partial class Form1 : Form
     private Button btnCos;
     private Button btnBin;
     private Button btn1x;
+
     private Button btnTanh;
     private Button btnTan;
     private Button btnHex;
@@ -189,7 +190,7 @@ public partial class Form1 : Form
         btnIgual.Text="=";
         btnDivision.Text="/";
 
-        btnpi.Text="π ";
+        btnpi.Text="π";
         btnlogaritmo.Text="Log";
         btnCuadrado.Text="x^2";
         btnSqrt.Text="Sqrt";
@@ -303,7 +304,18 @@ public partial class Form1 : Form
         btnpi.Click+=new EventHandler(btnpi_Click);
         miEstandar.Click+= new EventHandler(menuEstandar_Click);
         miCientifica.Click+= new EventHandler(menuCientifica_Click);
+        btnSinh.Click+= new EventHandler(btnSinh_Click);
+        btnCuadrado.Click+= new EventHandler(btnCuadrado_Click);
         btnBin.Click+= new EventHandler(btnBin_Click);
+        btnCosh.Click+= new EventHandler(btnCosh_Click);
+        btnCos.Click+= new EventHandler(btnCos_Click);
+        btnTan.Click+= new EventHandler(btnTan_Click);
+        btnTanh.Click+= new EventHandler(btnTanh_Click);
+        btnLnx.Click+= new EventHandler(btnLnx_Click);
+        btn1x.Click+= new EventHandler(btn1x_Click);
+        btnExp.Click+= new EventHandler(btnExp_Click);
+        btnDec.Click+= new EventHandler(btnDec_Click);
+        
         //Agregar controles a la ventana
         this.Controls.Add(txtDisplay);
         this.Controls.Add(lblOperacion);
@@ -316,11 +328,94 @@ public partial class Form1 : Form
 
 
     }
-    private void btnBin_Click(object sender, EventArgs e){
+    private void btn1x_Click(object sender, EventArgs e){
         if (valido()==true)
         {
+            lblOperacion.Text=$"1/({txtDisplay.Text}) =";
+            txtDisplay.Text=(1/Double.Parse(txtDisplay.Text)).ToString();
+        }
+        
+    }
+    private void btnExp_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"Exp({txtDisplay.Text}) =";
+            txtDisplay.Text=Math.Exp(Double.Parse(txtDisplay.Text)).ToString();
+        }
+        
+    }
+    
+     private void btnCosh_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"Cosh({txtDisplay.Text}) =";
+            txtDisplay.Text=Math.Cosh(Double.Parse(txtDisplay.Text)).ToString();
+        }
+        
+    }
+    private void btnCos_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"Cos({txtDisplay.Text}) =";
+            txtDisplay.Text=Math.Cos(Double.Parse(txtDisplay.Text)).ToString();
+        }
+        
+    }
+    private void btnTan_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"Tan({txtDisplay.Text}) =";
+            txtDisplay.Text=Math.Tan(Double.Parse(txtDisplay.Text)).ToString();
+        }
+        
+    }
+    private void btnTanh_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"Tanh({txtDisplay.Text}) =";
+            txtDisplay.Text=Math.Tanh(Double.Parse(txtDisplay.Text)).ToString();
+        }
+        
+    }
+    private void btnBin_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {   
             lblOperacion.Text=$"Bin({txtDisplay.Text}) =";
             txtDisplay.Text=Convert.ToString(Int32.Parse(txtDisplay.Text),2).ToString();
+        }
+        
+    }
+    private void btnDec_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {   
+            lblOperacion.Text=$"Dec({txtDisplay.Text}) =";
+            txtDisplay.Text=Convert.ToHexString(txtDisplay.Text).ToString();
+        }
+        
+    }
+
+    private void btnLnx_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"Ln({txtDisplay.Text}) =";
+            txtDisplay.Text=Math.Log(Double.Parse(txtDisplay.Text)).ToString();
+        }
+        
+    }
+    private void btnCuadrado_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"({txtDisplay.Text}^2) =";
+            txtDisplay.Text=Math.Pow(Double.Parse(txtDisplay.Text),2).ToString();
+        }
+        
+    }
+
+    private void btnSinh_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {
+            lblOperacion.Text=$"Sinh({txtDisplay.Text}) =";
+            txtDisplay.Text=Math.Sinh(Double.Parse(txtDisplay.Text)).ToString();
         }
         
     }
@@ -344,7 +439,7 @@ public partial class Form1 : Form
         if (valido()==true)
         {
         lblOperacion.Text=$"Log({txtDisplay.Text}) =";
-        txtDisplay.Text=Math.Log(Double.Parse(txtDisplay.Text)).ToString();
+        txtDisplay.Text=Math.Log10(Double.Parse(txtDisplay.Text)).ToString();
         }
         
     }
@@ -388,12 +483,17 @@ public partial class Form1 : Form
                      boton_igual();
                     break;
                 case "±":
-
+                    //txtDisplay.Text="-"+txtDisplay.Text;
+                    //lblOperacion.Text="-"+lblOperacion.Text;
                     break;
+                case "x^y":
+                    boton_operador("^");
+                break;
+                    
                 case "0": case "1":case "2": case "3": case "4":case "5":case "6":case "7":case "8":case "9":case ".":
                      boton_numero(btn.Text);
                     break;
-                case "+": case "-":case "*": case "/":
+                case "+": case "-":case "*": case "/": case"Mod":
                     boton_operador(btn.Text);
                     break;
             }
@@ -419,6 +519,12 @@ public partial class Form1 : Form
             case "/":
                 txtDisplay.Text=(resultado/Double.Parse(txtDisplay.Text)).ToString();
             break;
+            case "Mod":
+                txtDisplay.Text=(resultado%Double.Parse(txtDisplay.Text)).ToString();
+            break;
+            case "^":
+                txtDisplay.Text=(Math.Pow(resultado,Double.Parse(txtDisplay.Text))).ToString();
+            break;
         }
     }
 
@@ -443,6 +549,9 @@ public partial class Form1 : Form
             }
             
         }
+        
+            
+        
         else
             {
                 txtDisplay.Text+=valor;
