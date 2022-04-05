@@ -56,10 +56,12 @@ public partial class Form1 : Form
     private ToolStripMenuItem catTipo;
     private ToolStripMenuItem miEstandar;
     private ToolStripMenuItem miCientifica;
+    private String sistemanumerico;
 
     public Form1()
     {
         operacion="";
+        sistemanumerico="dec";
         resultado=0;
         txtDisplay= new TextBox();
         lblOperacion= new Label();
@@ -315,7 +317,7 @@ public partial class Form1 : Form
         btn1x.Click+= new EventHandler(btn1x_Click);
         btnExp.Click+= new EventHandler(btnExp_Click);
         btnDec.Click+= new EventHandler(btnDec_Click);
-        
+        btnHex.Click+= new EventHandler(btnHex_Click);
         //Agregar controles a la ventana
         this.Controls.Add(txtDisplay);
         this.Controls.Add(lblOperacion);
@@ -380,17 +382,71 @@ public partial class Form1 : Form
     private void btnBin_Click(object sender, EventArgs e){
         if (valido()==true)
         {   
-            lblOperacion.Text=$"Bin({txtDisplay.Text}) =";
-            txtDisplay.Text=Convert.ToString(Int32.Parse(txtDisplay.Text),2).ToString();
+            switch (sistemanumerico)
+            {
+                case "bin":
+
+                    break;
+                case "dec":
+                    lblOperacion.Text=$"Bin({txtDisplay.Text}) =";
+                    txtDisplay.Text=Convert.ToString(Int32.Parse(txtDisplay.Text),2).ToString();
+                break;
+                case "hex":
+                    lblOperacion.Text=$"Bin({txtDisplay.Text}) =";
+                    txtDisplay.Text=Convert.ToInt32(txtDisplay.Text, 2).ToString("X");
+                break;
+                
+            }
+            
+           
+            sistemanumerico="bin";
         }
+        
+    }
+     private void btnHex_Click(object sender, EventArgs e){
+        if (valido()==true)
+        {   switch (sistemanumerico)
+            {
+                case "bin":
+                    lblOperacion.Text=$"Hex({txtDisplay.Text}) =";
+                    txtDisplay.Text=Convert.ToString(Convert.ToInt32( txtDisplay.Text, 16), 2);
+                    break;
+                case "dec":
+                    lblOperacion.Text=$"Hex({txtDisplay.Text}) =";
+                    txtDisplay.Text=Convert.ToInt32(txtDisplay.Text,16).ToString();
+                 break;
+                case "hex":
+                    
+                break;
+                
+            }
+            
+        }
+        sistemanumerico="hex";
         
     }
     private void btnDec_Click(object sender, EventArgs e){
         if (valido()==true)
         {   
-            lblOperacion.Text=$"Dec({txtDisplay.Text}) =";
-            txtDisplay.Text=Convert.ToHexString(txtDisplay.Text).ToString();
+            switch (sistemanumerico)
+            {
+                case "bin":
+                    lblOperacion.Text=$"Dec({txtDisplay.Text}) =";
+                    txtDisplay.Text=Convert.ToInt64(txtDisplay.Text,2).ToString();
+                    break;
+                case "dec":
+                     
+                 break;
+                case "hex":
+                    lblOperacion.Text=$"Dec({txtDisplay.Text}) =";
+                    txtDisplay.Text=int.Parse(txtDisplay.Text).ToString("X");
+                break;
+                
+            }
+            
         }
+        sistemanumerico="dec";
+        
         
     }
 
